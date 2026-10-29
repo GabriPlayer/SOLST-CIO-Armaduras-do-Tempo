@@ -1,6 +1,6 @@
 ﻿{
   "FileVersion": 3,
-  "EngineAssociation": "5.4",
+  "EngineAssociation": "5.8",
   "Category": "",
   "Description": "SOLSTICIO: Ecos do Tempo",
   "Modules": [
@@ -10,3 +10,4 @@
     { "Name": "EnhancedInput", "Enabled": true }
   ]
 }
+
