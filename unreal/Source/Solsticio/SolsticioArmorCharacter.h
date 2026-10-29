@@ -1,11 +1,10 @@
-﻿#pragma once
+#pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "SolsticioArmorCharacter.generated.h"
 
 class UCameraComponent;
-class USpringArmComponent;
 
 // Armadura Solsticio: a energia solar alimenta propulsores e teletransporte temporal.
 UCLASS()
@@ -33,9 +32,11 @@ public:
     UFUNCTION(BlueprintCallable) bool TimeJump();
 
 private:
-    UPROPERTY(VisibleAnywhere) USpringArmComponent* Boom;
     UPROPERTY(VisibleAnywhere) UCameraComponent* Camera;
     bool bThrusting = false;
+    float BobTime = 0.f;
+    UPROPERTY() USceneComponent* ArmRig = nullptr;
+    bool Locked() const;
 
     void MoveForward(float V);
     void MoveRight(float V);

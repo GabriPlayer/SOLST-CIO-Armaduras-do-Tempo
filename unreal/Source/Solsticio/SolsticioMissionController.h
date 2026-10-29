@@ -1,23 +1,13 @@
-﻿#pragma once
+#pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "SolsticioStory.h"
 #include "SolsticioMissionController.generated.h"
 
-UENUM()
-enum class EStoryStepType : uint8 { Line, Sequence };
+enum class EPhase : uint8 { Loading, Step, MissionDone, Ending };
 
-USTRUCT()
-struct FStoryStep
-{
-    GENERATED_BODY()
-    EStoryStepType Type = EStoryStepType::Line;
-    FString Speaker;
-    FString Text;
-    TArray<FString> Items;
-};
-
-// Executa os passos de uma missao: dialogo e mini-jogos. O HUD le o estado publico.
+// Executa a campanha: dialogos, mini-jogos, escolhas, missoes e finais. O HUD le o estado publico.
 UCLASS()
 class SOLSTICIO_API ASolsticioMissionController : public APlayerController
 {
@@ -26,25 +16,40 @@ class SOLSTICIO_API ASolsticioMissionController : public APlayerController
 public:
     ASolsticioMissionController();
 
-    void StartMission(const FString& InTitle, const FString& InPlace, const TArray<FStoryStep>& InSteps);
+    void StartCampaign();
+    void LoadMission(int32 Index);
 
-    FString MissionTitle;
-    FString MissionPlace;
-    TArray<FStoryStep> Steps;
-    int32 StepIndex = INDEX_NONE;
-    bool bFinished = false;
+    FCampaign Campaign;
+    int32 MissionIndex = 0;
+    int32 Bond = 0;
+    EPhase Phase = EPhase::Loading;
+    float PhaseTime = 0.f;
+    float MissionTime = 0.f;
 
-    // Mini-jogo de sequencia: ordem escolhida pelo jogador (indices de Items).
+    TArray<FStep> Steps;
+    int32 StepIndex = 0;
+
+    // Mini-jogos
     TArray<int32> Picked;
-    FString SequenceResult;
+    TArray<int32> DisplayOrder;
+    FString Message;
+    float TimingPos = 0.f, TimingStart = 0.f;
+    float SliderVal = 0.9f;
+    TArray<FVector2D> TargetPos; // coordenadas de ecra normalizadas
+    float TargetTimeLeft = 0.f;
+    const FEnding* EndingData = nullptr;
 
-    const FStoryStep* GetStep() const { return Steps.IsValidIndex(StepIndex) ? &Steps[StepIndex] : nullptr; }
-    bool InDialogue() const { return StepIndex != INDEX_NONE && !bFinished; }
+    const FMission* GetMission() const { return Campaign.Missions.IsValidIndex(MissionIndex) ? &Campaign.Missions[MissionIndex] : nullptr; }
+    const FStep* GetStep() const { return Phase == EPhase::Step && Steps.IsValidIndex(StepIndex) ? &Steps[StepIndex] : nullptr; }
+    bool InMinigame() const;
 
 protected:
     virtual void PlayerTick(float DeltaTime) override;
 
 private:
-    void Advance();
     void EnterStep();
+    void Advance();
+    void FinishMission();
+    bool Pressed(const FKey& Key) const { return WasInputKeyJustPressed(Key); }
+    bool ClickOrEnter() const;
 };
