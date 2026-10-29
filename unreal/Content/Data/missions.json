@@ -1,0 +1,244 @@
+{
+  "missions": [
+    {
+      "title": "Missão 1 — O Projeto Solstício",
+      "place": "Centro de investigação da NASA",
+      "level": "/Game/Maps/Mission01",
+      "minutes": 25,
+      "intro": [
+        {
+          "who": "Narrador",
+          "text": "Num laboratório subterrâneo, Tim testa a armadura Solstício. No visor surgem os módulos A a G: energia solar, propulsão, escudo, sensores, ferramentas, navegação e núcleo temporal."
+        },
+        {
+          "who": "Tim",
+          "text": "A captação está a funcionar, mas o núcleo perde estabilidade quando tentamos ativar o teletransporte."
+        },
+        {
+          "who": "Martim",
+          "text": "E o que acontece se o problema aparecer perto do Sol?"
+        }
+      ]
+    },
+    {
+      "title": "Missão 2 — O Passageiro Secreto",
+      "place": "Nave Solarix-1",
+      "level": "/Game/Maps/Mission02",
+      "minutes": 25,
+      "intro": [
+        {
+          "who": "Narrador",
+          "text": "Tim esconde-se num compartimento de carga. Jack deteta um consumo extra de oxigénio e abre a câmara."
+        },
+        {
+          "who": "Jack",
+          "text": "Diz-me que és um equipamento de carga com pernas."
+        },
+        {
+          "who": "Tim",
+          "text": "Posso explicar."
+        }
+      ]
+    },
+    {
+      "title": "Missão 3 — A Órbita Solar",
+      "place": "Estação solar orbital",
+      "level": "/Game/Maps/Mission03",
+      "minutes": 30,
+      "intro": [
+        {
+          "who": "Narrador",
+          "text": "Em microgravidade, Tim aprende a controlar a armadura com a ajuda de Íris."
+        },
+        {
+          "who": "Íris",
+          "text": "Propulsor esquerdo. Pequeno impulso. Agora aguarde a estabilização."
+        },
+        {
+          "who": "Tim",
+          "text": "Parece fácil quando és tu a dizer."
+        }
+      ]
+    },
+    {
+      "title": "Missão 4 — O Hangar de 1986",
+      "place": "Instalação experimental da NASA, 1986",
+      "level": "/Game/Maps/Mission04",
+      "minutes": 25,
+      "intro": [
+        {
+          "who": "Narrador",
+          "text": "Jack e Tim materializam-se num hangar antigo. A armadura está danificada e o núcleo quase sem carga."
+        },
+        {
+          "who": "Tim",
+          "text": "Pensei que te tínhamos perdido."
+        },
+        {
+          "who": "Íris",
+          "text": "A ligação foi interrompida durante 3,8 segundos."
+        }
+      ]
+    },
+    {
+      "title": "Missão 5 — A Torre do Eclipse",
+      "place": "Observatório do século XVI",
+      "level": "/Game/Maps/Mission05",
+      "minutes": 25,
+      "intro": [
+        {
+          "who": "Narrador",
+          "text": "Durante um eclipse, a armadura entra em modo de conservação. É preciso alinhar espelhos antigos para recarregar o núcleo."
+        },
+        {
+          "who": "Tim",
+          "text": "Toda a gente pensa que eu sei o que estou a fazer."
+        },
+        {
+          "who": "Íris",
+          "text": "A análise das suas respostas indica que isso não é verdade."
+        }
+      ]
+    },
+    {
+      "title": "Missão 6 — A Cidade Sem Sol",
+      "place": "Cidade subterrânea, ano 2180",
+      "level": "/Game/Maps/Mission06",
+      "minutes": 30,
+      "intro": [
+        {
+          "who": "Narrador",
+          "text": "Os refletores da cidade estão avariados e drones de segurança procuram a assinatura temporal de Tim."
+        },
+        {
+          "who": "Íris",
+          "text": "Encontrei uma linha de código com o identificador IRIS. Não consigo explicar o que significa."
+        },
+        {
+          "who": "Narrador",
+          "text": "Com o coletor reativado, Íris reproduz uma música antiga. Tim promete ensinar-lhe a dançar quando regressarem."
+        }
+      ]
+    },
+    {
+      "title": "Missão 7 — O Futuro de Jack",
+      "place": "Estação solar abandonada, futuro próximo",
+      "level": "/Game/Maps/Mission07",
+      "minutes": 30,
+      "intro": [
+        {
+          "who": "Narrador",
+          "text": "Num registo da estação, Jack e José discutem durante o acidente que originou a desconfiança de Jack."
+        },
+        {
+          "who": "Jack",
+          "text": "Não vou esperar mais. Se o sistema falhou, saímos agora."
+        },
+        {
+          "who": "José",
+          "text": "Ainda tenho uma equipa no exterior. Dá-me dois minutos."
+        }
+      ]
+    },
+    {
+      "title": "Missão 8 — A Verdade de Marinho",
+      "place": "Laboratório de 1986",
+      "level": "/Game/Maps/Mission08",
+      "minutes": 25,
+      "intro": [
+        {
+          "who": "Dr. Marinho",
+          "text": "Vocês são os dois operadores que ainda não apareceram no meu relatório."
+        },
+        {
+          "who": "Narrador",
+          "text": "Marinho revela a verdade: a voz que acompanha a nave é o sistema de inteligência artificial da Solarix-1."
+        },
+        {
+          "who": "Tim",
+          "text": "Tu sabias que eu pensava que eras uma pessoa."
+        }
+      ]
+    },
+    {
+      "title": "Missão 9 — O Núcleo Solar",
+      "place": "Estação solar, presente",
+      "level": "/Game/Maps/Mission09",
+      "minutes": 30,
+      "intro": [
+        {
+          "who": "Narrador",
+          "text": "José guia Jack pelo rádio. É a primeira vez que Jack lhe confia a missão."
+        },
+        {
+          "who": "José",
+          "text": "Desta vez, deixa-me abrir o caminho."
+        },
+        {
+          "who": "Jack",
+          "text": "Está bem. Diz-me o que precisas."
+        }
+      ]
+    },
+    {
+      "title": "Missão 10 — A Escolha de Jack",
+      "place": "Núcleo temporal da estação",
+      "level": "/Game/Maps/Mission10",
+      "minutes": 25,
+      "intro": [
+        {
+          "who": "Narrador",
+          "text": "O ciclo temporal só pode ser interrompido apagando os dados do salto. Isso encerra o projeto — e pode afetar Íris."
+        },
+        {
+          "who": "Tim",
+          "text": "Se apagarmos o núcleo, não sei o que acontecerá contigo."
+        },
+        {
+          "who": "Íris",
+          "text": "A minha memória está distribuída por vários sistemas. Nem eu posso garantir que continuarei a ser exatamente a mesma. Isso também acontece com os humanos."
+        }
+      ]
+    },
+    {
+      "title": "Missão 11 — O Regresso à Terra",
+      "place": "Hangar da NASA",
+      "level": "/Game/Maps/Mission11",
+      "minutes": 15,
+      "intro": [
+        {
+          "who": "José",
+          "text": "Não precisamos de reconstruir o salto. Primeiro precisamos de confirmar que estão bem."
+        },
+        {
+          "who": "Jack",
+          "text": "Eu pensei que tinhas escolhido deixar-me para trás."
+        },
+        {
+          "who": "José",
+          "text": "E eu pensei que tinhas decidido que ninguém mais importava."
+        }
+      ]
+    },
+    {
+      "title": "Missão 12 — A Última Telemetria",
+      "place": "Laboratório de análise da NASA",
+      "level": "/Game/Maps/Mission12",
+      "minutes": 15,
+      "intro": [
+        {
+          "who": "Martim",
+          "text": "A armadura será preservada como protótipo. Não haverá mais saltos."
+        },
+        {
+          "who": "Tim",
+          "text": "Talvez seja melhor assim."
+        },
+        {
+          "who": "Íris",
+          "text": "A transferência terminou. Ainda consigo reconhecer a sua voz."
+        }
+      ]
+    }
+  ]
+}
