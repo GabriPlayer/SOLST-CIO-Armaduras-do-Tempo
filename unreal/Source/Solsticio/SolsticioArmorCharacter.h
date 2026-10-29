@@ -16,6 +16,7 @@ class SOLSTICIO_API ASolsticioArmorCharacter : public ACharacter
 public:
     ASolsticioArmorCharacter();
 
+    virtual void BeginPlay() override;
     virtual void Tick(float DeltaSeconds) override;
     virtual void SetupPlayerInputComponent(UInputComponent* Input) override;
 
@@ -44,4 +45,5 @@ private:
     void ThrustOff();
     void OnTimeJump();
 };
+
 

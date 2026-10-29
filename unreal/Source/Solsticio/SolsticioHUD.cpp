@@ -3,6 +3,8 @@
 #include "SolsticioArmorCharacter.h"
 #include "Engine/Canvas.h"
 #include "Engine/Engine.h"
+#include "SolsticioNPC.h"
+#include "EngineUtils.h"
 
 float ASolsticioHUD::DrawWrapped(const FString& Text, float X, float Y, float W, float Scale, const FLinearColor& Color)
 {
@@ -42,6 +44,17 @@ void ASolsticioHUD::DrawHUD()
         DrawText(TEXT("ENERGIA SOLAR"), FLinearColor::White, 24.f, 48.f, GEngine->GetSmallFont(), 1.f);
     }
 
+    {
+        const ASolsticioMissionController* Ctl = Cast<ASolsticioMissionController>(GetOwningPlayerController());
+        const FStoryStep* Cur = Ctl ? Ctl->GetStep() : nullptr;
+        for (TActorIterator<ASolsticioNPC> It(GetWorld()); It; ++It)
+        {
+            const FVector P = Canvas->Project(It->GetActorLocation() + FVector(0, 0, It->bHologram ? 230.f : 200.f));
+            if (P.Z <= 0.f) continue;
+            const bool bTalking = Cur && Cur->Type == EStoryStepType::Line && Cur->Speaker == It->DisplayName;
+            DrawText(It->DisplayName, bTalking ? FLinearColor(1.f, 0.85f, 0.2f) : FLinearColor::White, P.X - 20.f, P.Y, GEngine->GetMediumFont(), bTalking ? 1.3f : 1.f);
+        }
+    }
     const ASolsticioMissionController* PC = Cast<ASolsticioMissionController>(GetOwningPlayerController());
     if (!PC) return;
 
@@ -81,4 +94,5 @@ void ASolsticioHUD::DrawHUD()
     const FString Hint = PC->SequenceResult.IsEmpty() ? TEXT("Carrega nas teclas numéricas. Backspace desfaz.") : PC->SequenceResult + TEXT("  [Enter] continuar");
     DrawText(Hint, FLinearColor(1.f, 0.85f, 0.4f), BoxX + 20.f, BoxY + BoxH - 28.f, GEngine->GetSmallFont(), 1.f);
 }
+
 

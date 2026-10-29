@@ -3,6 +3,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/InputComponent.h"
+#include "Components/CapsuleComponent.h"
+#include "SolsticioModels.h"
 
 ASolsticioArmorCharacter::ASolsticioArmorCharacter()
 {
@@ -19,6 +21,16 @@ ASolsticioArmorCharacter::ASolsticioArmorCharacter()
     bUseControllerRotationYaw = false;
     GetCharacterMovement()->bOrientRotationToMovement = true;
     GetCharacterMovement()->AirControl = 0.8f;
+}
+
+void ASolsticioArmorCharacter::BeginPlay()
+{
+    Super::BeginPlay();
+    FHumanoidStyle Style;
+    Style.Suit = FLinearColor(0.04f, 0.08f, 0.2f);
+    Style.Plate = FLinearColor(0.9f, 0.62f, 0.08f);
+    Style.bArmor = true;
+    SolsticioModels::BuildHumanoid(this, GetCapsuleComponent(), -GetCapsuleComponent()->GetScaledCapsuleHalfHeight(), Style);
 }
 
 void ASolsticioArmorCharacter::Tick(float DeltaSeconds)
@@ -65,4 +77,5 @@ void ASolsticioArmorCharacter::LookUp(float V) { AddControllerPitchInput(V); }
 void ASolsticioArmorCharacter::ThrustOn() { bThrusting = true; }
 void ASolsticioArmorCharacter::ThrustOff() { bThrusting = false; }
 void ASolsticioArmorCharacter::OnTimeJump() { TimeJump(); }
+
 

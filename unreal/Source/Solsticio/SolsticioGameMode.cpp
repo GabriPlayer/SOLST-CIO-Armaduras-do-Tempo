@@ -1,6 +1,7 @@
 ﻿#include "SolsticioGameMode.h"
 #include "SolsticioArmorCharacter.h"
 #include "SolsticioHUD.h"
+#include "SolsticioNPC.h"
 #include "SolsticioMissionController.h"
 #include "Engine/StaticMeshActor.h"
 #include "Engine/StaticMesh.h"
@@ -56,6 +57,29 @@ void ASolsticioGameMode::BuildLab()
     SpawnBox(FVector(-600, S - 250, 50), FVector(900, 200, 100), FLinearColor(0.35f, 0.3f, 0.25f));
     SpawnBox(FVector(500, 0, 15), FVector(500, 500, 30), FLinearColor(1.f, 0.7f, 0.1f));
 
+
+    // Cenario extra: pilares, faixas luminosas e monitor central.
+    for (float X : { -1000.f, 0.f, 1000.f })
+        for (float Y : { -1400.f, 1400.f })
+            SpawnBox(FVector(X, Y, 250), FVector(80, 80, 500), FLinearColor(0.3f, 0.32f, 0.38f));
+    SpawnBox(FVector(0, 0, 1), FVector(2 * S - 200, 30, 2), FLinearColor(1.f, 0.7f, 0.1f));
+    SpawnBox(FVector(S - 60, 0, 300), FVector(10, 900, 300), FLinearColor(0.05f, 0.3f, 0.6f));
+    SpawnBox(FVector(S - 70, 0, 300), FVector(10, 860, 260), FLinearColor(0.3f, 0.8f, 1.f));
+    SpawnBox(FVector(500, 0, 120), FVector(60, 60, 180), FLinearColor(0.15f, 0.15f, 0.2f));
+
+    // Personagens
+    auto Spawn = [&](const TCHAR* Name, FVector Loc, FHumanoidStyle St, bool bHolo = false)
+    {
+        if (ASolsticioNPC* N = W->SpawnActor<ASolsticioNPC>(Loc, FRotator::ZeroRotator)) N->Setup(Name, St, bHolo);
+    };
+    FHumanoidStyle Martim; Martim.Suit = FLinearColor(0.15f, 0.15f, 0.2f); Martim.bLabCoat = true; Martim.Hair = FLinearColor(0.5f, 0.5f, 0.5f);
+    FHumanoidStyle Jack; Jack.Suit = FLinearColor(0.12f, 0.22f, 0.12f); Jack.Skin = FLinearColor(0.55f, 0.38f, 0.28f);
+    FHumanoidStyle Jose; Jose.Suit = FLinearColor(0.3f, 0.3f, 0.34f); Jose.Hair = FLinearColor(0.3f, 0.15f, 0.05f);
+    FHumanoidStyle Iris; Iris.Glow = FLinearColor(0.2f, 0.7f, 1.f);
+    Spawn(TEXT("Martim"), FVector(-300, 900, 0), Martim);
+    Spawn(TEXT("Jack"), FVector(100, -700, 0), Jack);
+    Spawn(TEXT("José"), FVector(300, -500, 0), Jose);
+    Spawn(TEXT("Íris"), FVector(S - 350, 0, 0), Iris, true);
     W->SpawnActor<APlayerStart>(FVector(-900, 0, 100), FRotator::ZeroRotator);
 
     if (ADirectionalLight* Sun = W->SpawnActor<ADirectionalLight>(FVector(0, 0, 1000), FRotator(-50, 30, 0)))
@@ -88,6 +112,11 @@ void ASolsticioGameMode::StartMission1()
         FStoryStep S; S.Speaker = Who; S.Text = Text; return S;
     };
     TArray<FStoryStep> Steps;
+    Steps.Add(Line(TEXT("Narrador"), TEXT("PRÓLOGO — Há anos, uma missão solar correu mal. Jack ficou para trás, sozinho, à espera de resgate.")));
+    Steps.Add(Line(TEXT("Jack"), TEXT("Esperei horas. Ninguém voltou por mim. Ninguém... a não ser a tempestade.")));
+    Steps.Add(Line(TEXT("José"), TEXT("Tive de escolher entre esperar por ti ou salvar o resto da equipa. Voltava a fazê-lo.")));
+    Steps.Add(Line(TEXT("Jack"), TEXT("Não confio em ti, José. Nunca vou confiar.")));
+    Steps.Add(Line(TEXT("Narrador"), TEXT("Desde esse dia, Jack e José mal se falam. Agora, a equipa vai precisar dos dois.")));
     Steps.Add(Line(TEXT("Narrador"), TEXT("Num laboratório subterrâneo, Tim testa a armadura Solstício. No visor surgem os módulos A a G: energia solar, propulsão, escudo, sensores, ferramentas, navegação e núcleo temporal.")));
     FStoryStep Seq;
     Seq.Type = EStoryStepType::Sequence;
@@ -112,5 +141,6 @@ void ASolsticioGameMode::BeginPlay()
     BuildLab();
     StartMission1();
 }
+
 
 
