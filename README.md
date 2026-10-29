@@ -11,3 +11,8 @@ Abre [game/index.html](game/index.html) no navegador (sem instalação). Campanh
 ## Versão 3D
 
 Projeto Unreal Engine 5.4 (C++) em [unreal/](unreal/README.md).
+
+## Launcher
+
+Na raiz do projeto, faz duplo clique em `Jogar.bat` para jogar a versao 3D (compila automaticamente), abrir o Unreal Editor ou jogar a versao web.
+
