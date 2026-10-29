@@ -11,4 +11,12 @@ class SOLSTICIO_API ASolsticioGameMode : public AGameModeBase
 
 public:
     ASolsticioGameMode();
+
+protected:
+    virtual void BeginPlay() override;
+
+private:
+    void BuildLab();
+    void SpawnBox(const FVector& Center, const FVector& Size, const FLinearColor& Color);
+    void StartMission1();
 };
