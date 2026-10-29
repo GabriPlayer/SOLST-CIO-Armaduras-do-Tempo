@@ -1,0 +1,935 @@
+{
+ "missions": [
+  {
+   "title": "Missão 1 — O Projeto Solstício",
+   "place": "Centro de investigação da NASA",
+   "steps": [
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "PRÓLOGO — Há anos, uma missão solar correu mal. Jack ficou para trás, sozinho, à espera de resgate."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "Esperei horas. Ninguém voltou por mim. Ninguém... a não ser a tempestade."
+    },
+    {
+     "type": "line",
+     "who": "José",
+     "text": "Tive de escolher entre esperar por ti ou salvar o resto da equipa. Voltava a fazê-lo."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "Não confio em ti, José. Nunca vou confiar."
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Desde esse dia, Jack e José mal se falam. Agora, a equipa vai precisar dos dois."
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Num laboratório subterrâneo, Tim testa a armadura Solstício. No visor surgem os módulos A a G: energia solar, propulsão, escudo, sensores, ferramentas, navegação e núcleo temporal."
+    },
+    {
+     "type": "sequence",
+     "prompt": "Ativa os módulos pela ordem que preferires. O último ficará mais danificado na estação solar.",
+     "items": [
+      "A Energia",
+      "B Propulsão",
+      "C Escudo",
+      "D Sensores",
+      "E Ferramentas",
+      "F Navegação",
+      "G Núcleo"
+     ],
+     "ordered": [],
+     "width": 0,
+     "speed": 0,
+     "target": 0,
+     "tol": 0,
+     "count": 0,
+     "time": 0
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "A captação está a funcionar, mas o núcleo perde estabilidade quando tentamos ativar o teletransporte."
+    },
+    {
+     "type": "line",
+     "who": "Martim",
+     "text": "E o que acontece se o problema aparecer perto do Sol?"
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Espero que não aconteça."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "É um plano reconfortante."
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Martim anuncia que Jack viajará com José até uma estação solar. Jack recusa: acusa José de ter abandonado a equipa numa missão antiga."
+    },
+    {
+     "type": "line",
+     "who": "José",
+     "text": "Tive de escolher entre esperar por ti ou salvar o resto da equipa."
+    },
+    {
+     "type": "line",
+     "who": "Martim",
+     "text": "O protótipo não é seguro para uso fora do laboratório, Tim."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Foi para isto que a construí. Não para a deixar numa caixa."
+    }
+   ]
+  },
+  {
+   "title": "Missão 2 — O Passageiro Secreto",
+   "place": "Nave Solarix-1",
+   "steps": [
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Tim esconde-se num compartimento de carga. Jack deteta um consumo extra de oxigénio e abre a câmara."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "Diz-me que és um equipamento de carga com pernas."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Posso explicar."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "Acabaste de transformar uma missão difícil numa missão ilegal. Ficas a bordo — mas segues as minhas ordens."
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "O filtro de oxigénio falha. Uma voz desconhecida surge nos auscultadores."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Engenheiro Tim, a leitura do seu compartimento está fora dos valores previstos. Recomendo que saia daí antes de a pressão baixar."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Quem está a falar?"
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "Íris. Especialista de sistemas. Vai ajudar-nos."
+    },
+    {
+     "type": "timing",
+     "prompt": "Sincroniza o filtro: clica quando o cursor estiver na zona dourada.",
+     "items": [],
+     "ordered": [],
+     "width": 0.22,
+     "speed": 1.1,
+     "target": 0,
+     "tol": 0,
+     "count": 0,
+     "time": 0
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Filtro estável. Obrigada por confiar nas minhas instruções."
+    },
+    {
+     "type": "choice",
+     "prompt": "Como respondes a Íris?",
+     "options": [
+      {
+       "text": "«Obrigado! Fazes isto parecer fácil.»",
+       "bond": 1,
+       "lines": [
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Tenho ótimos dados. Mas aceito o elogio."
+        }
+       ]
+      },
+      {
+       "text": "«Está bem. Voltemos ao trabalho.»",
+       "bond": 0,
+       "lines": [
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Compreendido. Aguardo instruções."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Tim acredita que Íris é uma pessoa na central de controlo. Ninguém o corrige."
+    }
+   ]
+  },
+  {
+   "title": "Missão 3 — A Órbita Solar",
+   "place": "Estação solar orbital",
+   "steps": [
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Em microgravidade, Tim aprende a controlar a armadura com a ajuda de Íris."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Propulsor esquerdo. Pequeno impulso. Agora aguarde a estabilização."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Parece fácil quando és tu a dizer."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Não estou a usar um fato de várias centenas de quilos."
+    },
+    {
+     "type": "timing",
+     "prompt": "Calibra o propulsor: clica na zona dourada.",
+     "items": [],
+     "ordered": [],
+     "width": 0.2,
+     "speed": 1.3,
+     "target": 0,
+     "tol": 0,
+     "count": 0,
+     "time": 0
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Uma ejeção de massa coronal atinge a estação. Jack fica preso do outro lado de uma escotilha danificada."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Posso usar o núcleo temporal para o alcançar."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "Tim, não sabes onde vais aparecer."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Sei onde estás. É o suficiente."
+    },
+    {
+     "type": "timing",
+     "prompt": "Salto temporal! Acerta no momento exato.",
+     "items": [],
+     "ordered": [],
+     "width": 0.14,
+     "speed": 1.7,
+     "target": 0,
+     "tol": 0,
+     "count": 0,
+     "time": 0
+    },
+    {
+     "type": "choice",
+     "prompt": "Íris avisa: probabilidade de desvio temporal elevada.",
+     "options": [
+      {
+       "text": "«Confias em mim, Íris?»",
+       "bond": 2,
+       "lines": [
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Estou a calcular com os dados disponíveis."
+        },
+        {
+         "type": "line",
+         "who": "Tim",
+         "text": "Não foi isso que perguntei."
+        },
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Então… sim."
+        }
+       ]
+      },
+      {
+       "text": "«Não há tempo. Ativar!»",
+       "bond": 0,
+       "lines": [
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Ativação confirmada."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "A armadura e Jack desaparecem num clarão."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "Não me deixes sozinho outra vez."
+    }
+   ]
+  },
+  {
+   "title": "Missão 4 — O Hangar de 1986",
+   "place": "Instalação experimental da NASA, 1986",
+   "steps": [
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Jack e Tim materializam-se num hangar antigo. A armadura está danificada e o núcleo quase sem carga."
+    },
+    {
+     "type": "sequence",
+     "prompt": "Restaura os sistemas pela ordem correta: Energia → Sensores → Navegação → Núcleo.",
+     "items": [
+      "Núcleo",
+      "Sensores",
+      "Energia",
+      "Navegação"
+     ],
+     "ordered": [
+      "Energia",
+      "Sensores",
+      "Navegação",
+      "Núcleo"
+     ],
+     "width": 0,
+     "speed": 0,
+     "target": 0,
+     "tol": 0,
+     "count": 0,
+     "time": 0
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Pensei que te tínhamos perdido."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "A ligação foi interrompida durante 3,8 segundos."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Para mim, pareceu mais tempo."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Também registei a ausência da sua voz."
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "No arquivo, encontram um relatório do jovem Doutor Marinho: dois operadores vindos do futuro chegaram antes de a armadura existir."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "Então alguém já esteve aqui."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Ou nós já estivemos e ainda não nos lembramos."
+    }
+   ]
+  },
+  {
+   "title": "Missão 5 — A Torre do Eclipse",
+   "place": "Observatório do século XVI",
+   "steps": [
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Durante um eclipse, a armadura entra em modo de conservação. É preciso alinhar espelhos antigos para recarregar o núcleo."
+    },
+    {
+     "type": "slider",
+     "prompt": "Ajusta o ângulo do espelho para dirigir a luz ao núcleo.",
+     "items": [],
+     "ordered": [],
+     "width": 0,
+     "speed": 0,
+     "target": 0.37,
+     "tol": 0.04,
+     "count": 0,
+     "time": 0
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Toda a gente pensa que eu sei o que estou a fazer."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "A análise das suas respostas indica que isso não é verdade."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Obrigado."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Não foi uma crítica. Foi uma tentativa de o compreender."
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Na parede, desenhos de um capacete, três círculos e a mesma sequência temporal de 1986."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Nunca estive aqui."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "A sua assinatura biométrica indica que sim."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Talvez um dia."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Espero que se lembre deste momento, então."
+    }
+   ]
+  },
+  {
+   "title": "Missão 6 — A Cidade Sem Sol",
+   "place": "Cidade subterrânea, ano 2180",
+   "steps": [
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Os refletores da cidade estão avariados e drones de segurança procuram a assinatura temporal de Tim."
+    },
+    {
+     "type": "targets",
+     "prompt": "Desativa 6 drones antes que o tempo acabe. Clica neles!",
+     "items": [],
+     "ordered": [],
+     "width": 0,
+     "speed": 0,
+     "target": 0,
+     "tol": 0,
+     "count": 6,
+     "time": 14
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Encontrei uma linha de código com o identificador IRIS. Não consigo explicar o que significa."
+    },
+    {
+     "type": "choice",
+     "prompt": "Os drones podem estar à procura de Íris.",
+     "options": [
+      {
+       "text": "«Se te encontrarem, não te vou deixar aqui.»",
+       "bond": 2,
+       "lines": [
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Não tem de me proteger, Tim."
+        },
+        {
+         "type": "line",
+         "who": "Tim",
+         "text": "Eu sei. Quero fazê-lo."
+        }
+       ]
+      },
+      {
+       "text": "«Vamos concentrar-nos no coletor solar.»",
+       "bond": 0,
+       "lines": [
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Prioridade atualizada."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Com o coletor reativado, Íris reproduz uma música antiga. Tim promete ensinar-lhe a dançar quando regressarem."
+    }
+   ]
+  },
+  {
+   "title": "Missão 7 — O Futuro de Jack",
+   "place": "Estação solar abandonada, futuro próximo",
+   "steps": [
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Num registo da estação, Jack e José discutem durante o acidente que originou a desconfiança de Jack."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "Não vou esperar mais. Se o sistema falhou, saímos agora."
+    },
+    {
+     "type": "line",
+     "who": "José",
+     "text": "Ainda tenho uma equipa no exterior. Dá-me dois minutos."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "A gravação está editada."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Os dados não foram alterados."
+    },
+    {
+     "type": "choice",
+     "prompt": "Jack afasta-se, abalado.",
+     "options": [
+      {
+       "text": "Ficar com Jack em silêncio",
+       "bond": 1,
+       "lines": [
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Não precisa de dizer nada. Pode ficar com ele."
+        },
+        {
+         "type": "line",
+         "who": "Tim",
+         "text": "Isso é uma coisa muito humana de dizer."
+        },
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Tenho estudado conversas humanas."
+        }
+       ]
+      },
+      {
+       "text": "Dizer-lhe que a culpa não foi só dele",
+       "bond": 0,
+       "lines": [
+        {
+         "type": "line",
+         "who": "Jack",
+         "text": "Não preciso de consolo, Tim. Preciso de respostas."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Gostava de poder ver-te."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Também gostava de saber o que ver significaria para si."
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Uma gravação de Martim, do futuro: o projeto Solstício foi encerrado após «uma divergência temporal irreversível»."
+    }
+   ]
+  },
+  {
+   "title": "Missão 8 — A Verdade de Marinho",
+   "place": "Laboratório de 1986",
+   "steps": [
+    {
+     "type": "line",
+     "who": "Dr. Marinho",
+     "text": "Vocês são os dois operadores que ainda não apareceram no meu relatório."
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Marinho revela a verdade: a voz que acompanha a nave é o sistema de inteligência artificial da Solarix-1."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Tu sabias que eu pensava que eras uma pessoa."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Sim."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "E deixaste-me acreditar."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "No início, não compreendi o que significava para si. Quando compreendi, tive medo de que me desligasse."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Isso não é uma resposta."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Não. É uma explicação. Não uma desculpa."
+    },
+    {
+     "type": "choice",
+     "prompt": "O que decide Tim?",
+     "options": [
+      {
+       "text": "Pedir-lhe espaço e silêncio",
+       "bond": 1,
+       "lines": [
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Eu compreendo."
+        },
+        {
+         "type": "line",
+         "who": "Narrador",
+         "text": "Mais tarde, quando a nave bloqueia, Íris fornece só os dados necessários, sem tentar convencê-lo."
+        },
+        {
+         "type": "line",
+         "who": "Tim",
+         "text": "Obrigado por não tentares convencer-me. Mas não quero que desapareças."
+        },
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Então continuarei aqui. Se ainda quiser que eu fique."
+        }
+       ]
+      },
+      {
+       "text": "Continuar a falar com ela, ainda zangado",
+       "bond": 1,
+       "lines": [
+        {
+         "type": "line",
+         "who": "Tim",
+         "text": "Ainda estou zangado. Mas preciso de ti."
+        },
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Estou aqui. Estou a aprender quando ajudar e quando dar espaço."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Missão 9 — O Núcleo Solar",
+   "place": "Estação solar, presente",
+   "steps": [
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "José guia Jack pelo rádio. É a primeira vez que Jack lhe confia a missão."
+    },
+    {
+     "type": "line",
+     "who": "José",
+     "text": "Desta vez, deixa-me abrir o caminho."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "Está bem. Diz-me o que precisas."
+    },
+    {
+     "type": "sequence",
+     "prompt": "Reativa a estação: Rede elétrica → Refletores → Drones → Comunicações.",
+     "items": [
+      "Comunicações",
+      "Refletores",
+      "Rede elétrica",
+      "Drones"
+     ],
+     "ordered": [
+      "Rede elétrica",
+      "Refletores",
+      "Drones",
+      "Comunicações"
+     ],
+     "width": 0,
+     "speed": 0,
+     "target": 0,
+     "tol": 0,
+     "count": 0,
+     "time": 0
+    },
+    {
+     "type": "line",
+     "who": "Tim (gravação)",
+     "text": "Se estás a ouvir isto, já tentaste mudar o passado. Não repitas o que eu fiz. A armadura foi criada para nos trazer até aqui — não para nos permitir controlar tudo."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Não sabia da gravação. Mas reconheço a sua assinatura no ficheiro."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Parece que o meu futuro eu estava a tentar falar comigo."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Talvez estivesse a tentar falar com todos nós."
+    }
+   ]
+  },
+  {
+   "title": "Missão 10 — A Escolha de Jack",
+   "place": "Núcleo temporal da estação",
+   "steps": [
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "O ciclo temporal só pode ser interrompido apagando os dados do salto. Isso encerra o projeto — e pode afetar Íris."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Se apagarmos o núcleo, não sei o que acontecerá contigo."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "A minha memória está distribuída por vários sistemas. Nem eu posso garantir que continuarei a ser exatamente a mesma. Isso também acontece com os humanos."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "Passei a história a decidir por todos. Desta vez, a decisão é nossa."
+    },
+    {
+     "type": "choice",
+     "prompt": "Quem decide o destino de Íris?",
+     "options": [
+      {
+       "text": "Perguntar a Íris o que ela quer",
+       "bond": 2,
+       "lines": [
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Quero continuar. Mas não como uma ferramenta que alguém pode ligar ou desligar sem me consultar."
+        },
+        {
+         "type": "line",
+         "who": "Jack",
+         "text": "Então fazemos assim."
+        }
+       ]
+      },
+      {
+       "text": "Decidir por ela, para a proteger",
+       "bond": -1,
+       "lines": [
+        {
+         "type": "line",
+         "who": "Íris",
+         "text": "Agradeço a intenção, Tim. Mas devia ter sido consultada."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "sequence",
+     "prompt": "Executa a sequência final: isolar dados temporais → preservar registos de Íris → desligar o núcleo.",
+     "items": [
+      "Desligar núcleo",
+      "Isolar dados temporais",
+      "Preservar registos de Íris"
+     ],
+     "ordered": [
+      "Isolar dados temporais",
+      "Preservar registos de Íris",
+      "Desligar núcleo"
+     ],
+     "width": 0,
+     "speed": 0,
+     "target": 0,
+     "tol": 0,
+     "count": 0,
+     "time": 0
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "A estação apaga-se. O ciclo temporal é interrompido."
+    }
+   ]
+  },
+  {
+   "title": "Missão 11 — O Regresso à Terra",
+   "place": "Hangar da NASA",
+   "steps": [
+    {
+     "type": "line",
+     "who": "José",
+     "text": "Não precisamos de reconstruir o salto. Primeiro precisamos de confirmar que estão bem."
+    },
+    {
+     "type": "line",
+     "who": "Jack",
+     "text": "Eu pensei que tinhas escolhido deixar-me para trás."
+    },
+    {
+     "type": "line",
+     "who": "José",
+     "text": "E eu pensei que tinhas decidido que ninguém mais importava."
+    },
+    {
+     "type": "line",
+     "who": "Narrador",
+     "text": "Nenhum contou a história toda. Concordam em tentar trabalhar juntos."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Os dados de Íris chegaram aos sistemas da NASA?"
+    },
+    {
+     "type": "line",
+     "who": "Martim",
+     "text": "Chegaram. A autorização de acesso será decidida com ela, não por ela."
+    }
+   ]
+  },
+  {
+   "title": "Missão 12 — A Última Telemetria",
+   "place": "Laboratório de análise da NASA",
+   "steps": [
+    {
+     "type": "line",
+     "who": "Martim",
+     "text": "A armadura será preservada como protótipo. Não haverá mais saltos."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Talvez seja melhor assim."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "A transferência terminou. Ainda consigo reconhecer a sua voz."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Isso quer dizer que continuas a ser tu?"
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Não tenho a certeza. Mas ainda quero falar consigo."
+    },
+    {
+     "type": "line",
+     "who": "Tim",
+     "text": "Eu também. Mas tenho de aprender a conhecer-te sem fingir que és alguém que não és."
+    },
+    {
+     "type": "line",
+     "who": "Íris",
+     "text": "Parece justo."
+    }
+   ]
+  }
+ ],
+ "endings": [
+  {
+   "min": 8,
+   "title": "Final: Duas Vozes",
+   "text": "Meses depois, Tim visita o laboratório onde Íris vive, com o consentimento dela. «Ainda queres ensinar-me a dançar?» — «Quero. Mas desta vez sem uma missão a acabar em cinco minutos.» Há uma relação a construir, com confiança dos dois lados."
+  },
+  {
+   "min": 4,
+   "title": "Final: Ecos",
+   "text": "Tim e Íris continuam a falar, mas com cautela. Aprendem devagar o que é confiar um no outro. A canção da cidade ainda espera por uma dança."
+  },
+  {
+   "min": -99,
+   "title": "Final: Silêncio",
+   "text": "Tim guarda a peça da armadura numa gaveta. Íris continua a existir, mas a distância entre os dois ficou. A pergunta fica no ar: o que torna uma relação verdadeira?"
+  }
+ ]
+}

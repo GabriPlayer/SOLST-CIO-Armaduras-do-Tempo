@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{0D6B2507-446D-4C50-464C-E08B6FC9A49F}",
+	"Category": "",
+	"Description": "SOLSTICIO: Ecos do Tempo",
+	"Modules": [
+		{
+			"Name": "Solsticio",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "EnhancedInput",
+			"Enabled": true
+		}
+	]
+}
